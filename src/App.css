@@ -1,0 +1,106 @@
+/* Base layer — modern reset + font smoothing */
+:root {
+  --transition-fast: 180ms ease-in-out;
+  --transition-normal: 300ms ease;
+  --brand-accent: #2563eb;
+  --radius-lg: 1.25rem;
+  --radius-md: 0.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-color: #fafafa;
+  color: #1f2937;
+  line-height: 1.6;
+  transition: background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+/* Container utilities for responsive balance */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+/* Calendar visual tweaks */
+.calendar-card {
+  border-radius: var(--radius-lg);
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.calendar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons and interactive elements */
+button {
+  transition: all var(--transition-fast);
+}
+
+button:hover,
+button:focus {
+  filter: brightness(1.05);
+}
+
+/* Header + Footer polish */
+header {
+  backdrop-filter: saturate(150%) blur(8px);
+}
+
+footer {
+  backdrop-filter: saturate(150%) blur(4px);
+}
+
+/* Responsive layout helpers */
+@media (max-width: 639px) {
+  header h1 {
+    font-size: 1.25rem;
+  }
+  header p {
+    font-size: 0.875rem;
+  }
+  footer {
+    font-size: 0.7rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 2rem 3rem;
+  }
+  .calendar-card {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  main {
+    padding: 2rem 4rem;
+  }
+}  
