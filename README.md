@@ -6,6 +6,16 @@ Component-driven dev/test is set up via **Storybook**, with full ESLint and Type
 
 ***
 
+## 🚀 Live Demo
+
+### Main Calendar App:
+https://calendar-component-psi.vercel.app/
+
+### Storybook (Components Demo):
+https://chimerical-profiterole-258f91.netlify.app/
+
+***
+
 ## 🚀 Getting Started
 
 ### 1. **Project Kickoff**
